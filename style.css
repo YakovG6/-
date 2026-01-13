@@ -1,0 +1,95 @@
+/* Perfect Typography Restoration */
+:root {
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headers precisely like in the screenshot */
+h1, .h1-style {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  color: #1a1a1a;
+}
+
+.italic-serif {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.italic-accent {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Labels precisely like in the header of screenshot */
+.label-small {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Reveal System */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.header-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 10px; }
+
+/* Buttons */
+.btn-main {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  transition: all 0.4s var(--ease);
+}
+
+/* Fix for background shifts during menu opening */
+body.menu-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Custom Brand Color */
+.text-brand-dark {
+  color: #1a1a1a;
+}
+.bg-brand-dark {
+  background-color: #1a1a1a;
+}
