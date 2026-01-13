@@ -16,5 +16,14 @@ View your app in AI Studio: https://ai.studio/apps/drive/1ps54bTr756ZcLe4lLqHiq0
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. Run the full stack (frontend + API):
+   `npm run dev:full`
+
+## Backend (Admin API)
+
+The project includes an Express + LowDB backend for admin authentication, catalog updates, leads, and chat sessions.
+
+* Start the API only: `npm run server`
+* Default admin credentials (change after launch):
+  * **Login:** `admin`
+  * **Password:** `admin123`
